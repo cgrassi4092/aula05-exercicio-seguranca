@@ -4,6 +4,8 @@ Para o nosso exercício vamos usar uma aplicação de código aberto, proposital
 
 ## 1. Preparação do exercício
 
+Enable Advanced Security
+
 Enable dependabot alerts
 
 mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
