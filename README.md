@@ -19,3 +19,6 @@ mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
 ```
 
 Add snyk
+
+
+https://github.com/marketplace/actions/owasp-zap-full-scan
