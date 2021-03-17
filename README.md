@@ -17,3 +17,5 @@ mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
 <sonar.organization>pedrolacerda</sonar.organization>
 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 ```
+
+Add snyk
