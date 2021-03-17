@@ -22,3 +22,5 @@ Add snyk
 
 
 https://github.com/marketplace/actions/owasp-zap-full-scan
+
+GitGuardian
