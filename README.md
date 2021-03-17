@@ -8,6 +8,8 @@ Enable Advanced Security
 
 Enable dependabot alerts
 
+Enable issues
+
 mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
 
 ```xml
@@ -22,5 +24,6 @@ Add snyk
 
 
 https://github.com/marketplace/actions/owasp-zap-full-scan
+https://www.zaproxy.org/docs/
 
 GitGuardian
