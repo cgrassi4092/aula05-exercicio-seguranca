@@ -205,5 +205,9 @@ jobs:
 4. Execute o workflow manualmente e verifique os resultados na aba `Security` > `Code scanning alerts` > `Anchore Container Vulnerability Report (T0)`
    1. :question: Containers são seguros?
 
+## 3. Análise de dependências
+
+Você deve ter percebido que alguns pull requests foram abertos automaticamente no seu repositório. Além disso, há um banner de alerta no repositório
+
 <!-- https://github.com/marketplace/actions/owasp-zap-full-scan
 https://www.zaproxy.org/docs/ -->
