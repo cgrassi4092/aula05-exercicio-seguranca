@@ -20,9 +20,9 @@ Faça um fork do [WebGoat](https://github.com/WebGoat/WebGoat) para sua conta pe
 
 ### 1.3 Configuração do repositório
 
-No seu fork, vá em **Setings** > **Security & analysis** e clique em `Enable` nas três opções disponíveis.
+No seu fork, vá em `Setings` > `Security & analysis` e clique em `Enable` nas três opções disponíveis.
 
-Em seguida, no menu da esquerda, vá em **Options**, na seção **Features** e marque o checkbox **Issues** 
+Em seguida, no menu da esquerda, vá em `Options`, na seção `Features` e marque o checkbox `Issues`.
 
 ## 2. Configuração das Análises de Segurança
 
