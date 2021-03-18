@@ -207,10 +207,21 @@ jobs:
 
 ## 3. Análise de dependências
 
-Você deve ter percebido que alguns pull requests foram abertos automaticamente no seu repositório. Além disso, há um banner de alerta no repositório
+Você deve ter percebido que alguns pull requests foram abertos automaticamente no seu repositório. Além disso, há um banner de alerta no repositório:
 
 ![image](https://user-images.githubusercontent.com/609076/111558661-f960fc80-876d-11eb-9735-0c1373c9f5c6.png)
 
+:question: O que são esses alertas?
+:question: Por que os PRs foram abertos?
 
-<!-- https://github.com/marketplace/actions/owasp-zap-full-scan
-https://www.zaproxy.org/docs/ -->
+## 4. "Desafio"
+
+Configure o [GitGuardian](https://www.gitguardian.com/) e o [Snyk](https://snyk.io/) para analisarem o repositório.
+
+:question: Qual tipo de análise essas ferramentas fazem?
+
+## 5. Extra:
+
+[ZAP Security testing](https://www.zaproxy.org/)
+
+O Zap permite executar DAST via GitHub Actions. Mais informações em: <https://github.com/marketplace/actions/owasp-zap-full-scan>
