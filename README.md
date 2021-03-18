@@ -228,7 +228,7 @@ Vamos criar um PR para ver como isso ficaria :+1:
    4. [userApiSpec.js](https://github.com/pedrolacerda/WebGoat/blob/new-feature-branch/js/userApiSpec.js)
 3. Em seguida, clique em `Pull requests` e verá que apareceu um banner amarelo sugerindo que você abra um novo PR para o merge das modificações. Clique no botão `Compare & pull request`
 4. Tenha certeza que você está abrindo um pull request apenas para dentro do seu próprio repositório e clique `Create pull request`
-![image](https://user-images.githubusercontent.com/609076/111647642-6a8dc780-87e1-11eb-877a-dae55b5c6247.png)
+![image](https://user-images.githubusercontent.com/609076/111647742-8002f180-87e1-11eb-8f63-1ae98d6e0ff5.png)
 
 :question: Como os workflows de segurança foram executados?
 
