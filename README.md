@@ -103,8 +103,107 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: ./mvnw verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+```
+
+3. Execute o workflow manualmente e aguarde os resultados aparecerem no Sonarcloud. 
+   1. :question: O que mais te chamou atenção?
+
+### 2.1 GitHub Advanced Security
+
+1. Clique na aba `Security` e em seguida, no menu esquerdo, `Code scanning alerts`
+2. Na tela seguinte, no canto direto, clique em `Set up more code scanning tools`
+3. A primeira opção é o **CodeQL Analysis**, clique em `Set up this workflow`
+4. Substitua o conteúdo do arquivo de workflow pelo código abaixo:
+
+```yml
+name: "CodeQL"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java', 'javascript' ]
+
+    steps:
+
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v1
+      with:
+        languages: ${{ matrix.language }}
+    
+    - name: Set up JDK 1.11
+      if: matrix.language == 'java'
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.11
+      
+    - name: Build with Maven
+      if: matrix.language == 'java'
+      run: mvn -B package --file pom.xml
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v1
 
 ```
 
-https://github.com/marketplace/actions/owasp-zap-full-scan
-https://www.zaproxy.org/docs/
+5. Execute o workflow manualmente e aguarde os resultados aparecerem em `Security` > `Code scanning alerts` > `CodeQL`
+   1. :question: Os resultados parecem com os do Sonarcloud?
+
+### 2.1 Anchore
+
+O [Anchore](https://anchore.com/) é uma ferramenta open source para análise de vulnerabilidades. Vamos configurá-lo para analisar a segurança do container do WebGoat.
+
+1. Em `Security` > `Code scanning alerts`, selecione novamente `Set up more code scanning tools`
+2. A opção na segunda coluna da primeira linha é **Anchore Container Scan**. Clique em `Set up this workflow`
+3. Elimine as linhas **24** e **25** e altere o parâmetro `image` para: 
+
+```yml
+image: "webgoat/goatandwolf"
+```
+
+O arquivo final deve ficar como o a seguir:
+
+```yml
+name: Anchore Container Scan
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  Anchore-Build-Scan:
+  
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Checkout the code
+      uses: actions/checkout@v2
+      
+    - name: Run the Anchore scan action itself with GitHub Advanced Security code scanning integration enabled
+      uses: anchore/scan-action@main
+      with:
+        image: "webgoat/goatandwolf"
+        acs-report-enable: true
+        fail-build: false
+        
+    - name: Upload Anchore Scan Report
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: results.sarif
+```
+
+4. Execute o workflow manualmente e verifique os resultados na aba `Security` > `Code scanning alerts` > `Anchore Container Vulnerability Report (T0)`
+   1. :question: Containers são seguros?
+
+<!-- https://github.com/marketplace/actions/owasp-zap-full-scan
+https://www.zaproxy.org/docs/ -->
