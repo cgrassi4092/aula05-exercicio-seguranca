@@ -214,13 +214,30 @@ Você deve ter percebido que alguns pull requests foram abertos automaticamente 
 :question: O que são esses alertas?
 :question: Por que os PRs foram abertos?
 
-## 4. "Desafio"
+## 4. Shifting left na segurança
+
+Vimos até agora como realizar análises no código que está no nosso repositório no branch principal. Mas e se quisermos validar que estamos entregando código seguro antes que alguma vulnerabilidade seja entregue em produção?
+
+Vamos criar um PR para ver como isso ficaria :+1:
+
+1. Crie um novo branch chamado `new-feature-branch`
+2. Crie uma nova pasta na raíz do projeto chamada `js` e adicione os seguintes arquivos:
+   1. [index.js](https://github.com/pedrolacerda/WebGoat/blob/new-feature-branch/js/index.js)
+   2. [insecurity.js](https://github.com/pedrolacerda/WebGoat/blob/new-feature-branch/js/insecurity.js)
+   3. [secrets.js](https://github.com/pedrolacerda/WebGoat/blob/new-feature-branch/js/secrets.js)
+   4. [userApiSpec.js](https://github.com/pedrolacerda/WebGoat/blob/new-feature-branch/js/userApiSpec.js)
+3. Em seguida, clique em `Pull requests` e verá que apareceu um banner amarelo sugerindo que você abra um novo PR para o merge das modificações. Clique no botão `Compare & pull request`
+4. Tenha certeza que você está abrindo um pull request apenas para dentro do seu próprio repositório e clique `Create pull request`
+
+:question: Como os workflows de segurança foram executados?
+
+## 5. "Desafio"
 
 Configure o [GitGuardian](https://www.gitguardian.com/) e o [Snyk](https://snyk.io/) para analisarem o repositório.
 
 :question: Qual tipo de análise essas ferramentas fazem?
 
-## 5. Extra:
+## 6. Extra
 
 [ZAP Security testing](https://www.zaproxy.org/)
 
