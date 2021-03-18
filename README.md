@@ -221,11 +221,12 @@ Vimos até agora como realizar análises no código que está no nosso repositó
 Vamos criar um PR para ver como isso ficaria :+1:
 
 1. Crie um novo branch chamado `new-feature-branch`
-2. Altere os seguintes arquivos, para que eles tenham o conteúdo idêntico ao dos arquivos linkados:
+2. Altere/adicione os seguintes arquivos, para que eles tenham o conteúdo idêntico ao dos arquivos linkados:
    1. [webgoat-integration-tests/src/test/java/org/owasp/webgoat/SqlInjectionLessonTest.java](https://github.com/pedrolacerda/WebGoat/blob/new-feature-branch/webgoat-integration-tests/src/test/java/org/owasp/webgoat/SqlInjectionLessonTest.java)
-   2. [webgoat-lessons/sql-injection/src/main/java/org/owasp/webgoat/sql_injection/introduction/SqlInjectionLesson11.java](https://github.com/pedrolacerda/WebGoat/blob/new-feature-branch/webgoat-lessons/sql-injection/src/main/java/org/owasp/webgoat/sql_injection/introduction/SqlInjectionLesson11.java)
-   3. [webgoat-lessons/sql-injection/src/main/resources/html/SqlInjection.html](https://github.com/pedrolacerda/WebGoat/blob/new-feature-branch/webgoat-lessons/sql-injection/src/main/resources/html/SqlInjection.html)
-   4. [webgoat-lessons/sql-injection/src/main/resources/i18n/WebGoatLabels.properties](https://github.com/pedrolacerda/WebGoat/blob/new-feature-branch/webgoat-lessons/sql-injection/src/main/resources/i18n/WebGoatLabels.properties)
+   2. [webgoat-lessons/secure-passwords/src/main/java/org/owasp/webgoat/Secrets.java](https://github.com/pedrolacerda/WebGoat/blob/new-feature-branch/webgoat-lessons/secure-passwords/src/main/java/org/owasp/webgoat/Secrets.java)
+   3. [webgoat-lessons/sql-injection/src/main/java/org/owasp/webgoat/sql_injection/introduction/SqlInjectionLesson11.java](https://github.com/pedrolacerda/WebGoat/blob/new-feature-branch/webgoat-lessons/sql-injection/src/main/java/org/owasp/webgoat/sql_injection/introduction/SqlInjectionLesson11.java)
+   4. [webgoat-lessons/sql-injection/src/main/resources/html/SqlInjection.html](https://github.com/pedrolacerda/WebGoat/blob/new-feature-branch/webgoat-lessons/sql-injection/src/main/resources/html/SqlInjection.html)
+   5. [webgoat-lessons/sql-injection/src/main/resources/i18n/WebGoatLabels.properties](https://github.com/pedrolacerda/WebGoat/blob/new-feature-branch/webgoat-lessons/sql-injection/src/main/resources/i18n/WebGoatLabels.properties)
 3. Em seguida, clique em `Pull requests` e verá que apareceu um banner amarelo sugerindo que você abra um novo PR para o merge das modificações. Clique no botão `Compare & pull request`
 4. Tenha certeza que você está abrindo um pull request apenas para dentro do seu próprio repositório e clique `Create pull request`
 
