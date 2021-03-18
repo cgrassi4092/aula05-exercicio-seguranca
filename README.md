@@ -224,4 +224,4 @@ Configure o [GitGuardian](https://www.gitguardian.com/) e o [Snyk](https://snyk.
 
 [ZAP Security testing](https://www.zaproxy.org/)
 
-O Zap permite executar DAST via GitHub Actions. Mais informações em: <https://github.com/marketplace/actions/owasp-zap-full-scan>
+O Zap permite executar **DAST** via GitHub Actions. Mais informações em: <https://github.com/marketplace/actions/owasp-zap-full-scan>
