@@ -16,15 +16,16 @@ Você deve ter um perfil/conta criado nas seguintes plataformas/serviços
 
 ### 1.2 WebGoat
 
-Faça um fork do [WebGoat](https://github.com/WebGoat/WebGoat) para sua conta pessoal. Não é necessá
+Faça um fork do [WebGoat](https://github.com/WebGoat/WebGoat) para sua conta pessoal. Não é necessário baixar o código na sua máquina pessoal. Vamos rodar tudo online 🎉
 
-Enable Advanced Security
+### 1.3 Configuração do repositório
 
-Enable dependabot alerts
+No seu fork, vá em **Setings** > **Security & analysis** e clique em `Enable` nas três opções disponíveis.
 
-Enable issues
+Em seguida, no menu da esquerda, vá em **Options**, na seção **Features** e marque o checkbox **Issues** 
 
-mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+## 2. Configuração das Análises de Segurança
+
 
 ```xml
 <!-- Sonar properties-->
