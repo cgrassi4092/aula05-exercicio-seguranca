@@ -116,9 +116,15 @@ jobs:
 4. Substitua o conteúdo do arquivo de workflow pelo código abaixo:
 
 ```yml
+
 name: "CodeQL"
 
 on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [develop]
+    
   workflow_dispatch:
 
 jobs:
