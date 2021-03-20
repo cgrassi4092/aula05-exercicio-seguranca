@@ -43,7 +43,7 @@ O Sonarcloud irá informar que não recomenda uma análise automática do reposi
 11. Clique em `With GitHub Actions` e siga o passo a passo informado na tela.
     1. Quando perguntado _**What option best describes your build?**_, selecione `Maven`
 
-:rotating_light Você precisará alterar algumas pequenas configurações para a executar o projeto:
+:rotating_light: Você precisará alterar algumas pequenas configurações para a executar o projeto:
 
 1. As configurações do seu `pom.xml` devem ser ajustadas para entender que o [WebGoat](https://owasp.org/www-project-webgoat/) possui vários módulos. Ajuste conforme o snippet de código abaixo, substituindo o valor em `<sonar.projectKey>` pela chave correta do seu projeto no Sonarcloud.
 
